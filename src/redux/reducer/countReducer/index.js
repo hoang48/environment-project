@@ -1,6 +1,7 @@
 import produce from 'immer';
 
-import * as countTypes from '../../actions/count/countTypes';
+import { DECREMENT, INCREMENT } from '../../actions/count';
+
 
 const initialState = {
   count: 0
@@ -9,11 +10,11 @@ const initialState = {
 const countReducer = (state = initialState, action) =>
   produce(state, (draft) => {
     switch (action.type) {
-    case countTypes.DECREMENT:
+    case DECREMENT:
       draft.count--;
       break;
 
-    case countTypes.INCREMENT:
+    case INCREMENT:
       draft.count++;
       break;
     default:

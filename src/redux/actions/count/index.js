@@ -1,9 +1,11 @@
-import * as countTypes from './countTypes';
+export const INCREMENT = 'INCREMENT';
+
+export const DECREMENT = 'DECREMENT';
 
 export const decrement = () => ({
-  type: countTypes.DECREMENT
+  type: DECREMENT
 });
 
 export const increment = () => ({
-  type: countTypes.INCREMENT
+  type: INCREMENT
 });

@@ -1,6 +1,6 @@
-import * as isLoggedTypes from './isLoggedTypes';
+export const ISLOGGED = 'ISLOGGED';
 
 export const isLogged = (payload) => ({
-  type: isLoggedTypes.ISLOGGED,
+  type: ISLOGGED,
   payload
 });

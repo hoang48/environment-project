@@ -1,6 +1,6 @@
 import produce from 'immer';
 
-import * as isLoggedTypes from '../../actions/isLogged/isLoggedTypes';
+import { ISLOGGED } from '../../actions/isLogged';
 
 const initialState = {
   isLogged: false
@@ -9,13 +9,13 @@ const initialState = {
 const loggingReducer = (state = initialState, action) =>
   produce(state, (draft) => {
     switch (action.type) {
-    case isLoggedTypes.ISLOGGED:
+    case ISLOGGED:
       draft.isLogged = action.payload;
       break;
     default:
       return state;
     }
-    
+
     return draft;
   });
 
